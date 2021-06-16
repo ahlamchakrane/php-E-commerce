@@ -16,7 +16,7 @@ include('database_connection.php');
 		    max-width: 800px;
 		}
 		*{
-			font-size: 16px;
+		    font-size: 16px;
 		}
 		</style>
 	</head>
