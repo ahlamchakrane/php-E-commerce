@@ -60,11 +60,10 @@ $connect = new PDO("mysql:host=localhost;dbname=boutique", 'root', '');
       </tr>
 </thead>
 <?php
-$query = "SELECT * FROM products ORDER BY price DESC";
+$query = "SELECT * FROM products ";
 if(!empty($_POST['category']))
 {
-
-      $query.="  inner join productcategories pc on products.sku=pc.product where pc.category='".$_POST["category"]."'";
+      $query.="  inner join productcategories pc on products.sku=pc.product where pc.category='".$_POST["category"]."' ORDER BY price DESC ";
 }
 $statement = $connect->prepare($query);
 

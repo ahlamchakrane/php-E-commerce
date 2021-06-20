@@ -30,7 +30,7 @@ session_start();
            		   		 <input type="hidden" name="username" value='<?= $_SESSION['user']['username']?>'>
            		   		</h5>
            		   </div>
-           		 <?php if(!empty($_SESSION['total']) && isset($_SESSION['user']['username'])){?>
+           		 <?php if(($_SESSION['total']!=0) && isset($_SESSION['user']['username'])){?>
    
            		   <div class="div">
            		   		<h5><?php if(isset($_SESSION['total'])){echo '<p>The total to pay is: <strong>'.$_SESSION['total'].'</strong>MAD</p>';}?></h5>
