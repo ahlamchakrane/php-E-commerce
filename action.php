@@ -51,7 +51,7 @@ if(isset($_POST["action"]))
 			if($values["product_id"] == $_POST["product_id"])
 			{
 				unset($_SESSION["shopping_cart"][$keys]);
-				$_SESSION['total']=0;
+				
 			}
 		}
 	}
@@ -59,6 +59,7 @@ if(isset($_POST["action"]))
 	if($_POST["action"] == 'empty')
 	{
 		unset($_SESSION["shopping_cart"]);
+		$_SESSION['total']=0;
 	}
 
 	if($_POST["action"] == "update")
