@@ -136,7 +136,7 @@ $(document).ready(function(){
 				data:{product_id:product_id, product_name:product_name, product_image:product_image, product_price:product_price, product_quantity:product_quantity, action:action},
 				success:function(data)
 				{
-					load_cart_data();
+					load_cart_data(true);
 					
 				}
 			});
